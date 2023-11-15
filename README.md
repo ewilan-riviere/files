@@ -14,7 +14,12 @@ go install github.com/ewilan-riviere/spotlight@latest
 
 ## Usage
 
-//
+```bash
+go build -o files ; ./files parse /Volumes/data/video/animation
+go build -o files ; ./files --output="output/files.json" parse /Volumes/data/video/animation
+
+go build -o files ; ./files --output="output/metadata.json" metadata /Volumes/data/music/librairies/podcasts/F.Kermesse/FK.1_Le.Gore.Philippe.Bouvard.de.la.mort.mp3
+```
 
 ## License
 

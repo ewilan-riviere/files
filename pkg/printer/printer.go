@@ -56,17 +56,16 @@ func createDirIfNotExist(path string) {
 }
 
 func Print(s interface{}) {
-	firstElement := reflect.ValueOf(s).Index(0).Interface()
-	currentType := reflect.TypeOf(firstElement)
+	currentType := reflect.TypeOf(s)
+	fmt.Println(currentType.String())
 
-	switch currentType.Kind() {
-	case reflect.String:
+	fmt.Print("\n")
+	if currentType.String() == "[]string" {
 		printString(s)
-	case reflect.Struct:
+	} else {
 		printStruct(s)
-	default:
-		fmt.Println("Unknown type")
 	}
+	fmt.Print("\n")
 }
 
 func printString(s interface{}) {
