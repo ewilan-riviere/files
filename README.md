@@ -25,13 +25,13 @@ Options:
 ### Parse
 
 ```bash
-files parse /path/to/directory
+scanner parse /path/to/directory
 ```
 
 ### Metadata
 
 ```bash
-files metadata /path/to/file
+scanner metadata /path/to/file
 ```
 
 ## License
