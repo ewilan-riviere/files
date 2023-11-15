@@ -57,7 +57,6 @@ func createDirIfNotExist(path string) {
 
 func Print(s interface{}) {
 	currentType := reflect.TypeOf(s)
-	fmt.Println(currentType.String())
 
 	fmt.Print("\n")
 	if currentType.String() == "[]string" {
