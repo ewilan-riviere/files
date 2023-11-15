@@ -1,10 +1,10 @@
-// Package files is a CLI to parse files for a list or to get metadata.
+// Package scanner is a CLI to parse files for a list or to get metadata.
 //
-// Examples/readme can be found on the GitHub page at https://github.com/ewilan-riviere/files
+// Examples/readme can be found on the GitHub page at https://github.com/ewilan-riviere/scanner
 //
 // If you want to use it as CLI, you can install it with:
 //
-//	go install github.com/ewilan-riviere/files
+//	go install github.com/ewilan-riviere/scanner
 //
 // All commands have output option to print the result into a JSON file.
 //
@@ -22,9 +22,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/ewilan-riviere/files/pkg/files"
-	"github.com/ewilan-riviere/files/pkg/mediainfo"
-	"github.com/ewilan-riviere/files/pkg/printer"
+	"github.com/ewilan-riviere/scanner/pkg/files"
+	"github.com/ewilan-riviere/scanner/pkg/mediainfo"
+	"github.com/ewilan-riviere/scanner/pkg/printer"
 	"github.com/spf13/cobra"
 )
 

@@ -1,6 +1,6 @@
 package convert
 
-import "github.com/ewilan-riviere/files/pkg/mediainfo/types"
+import "github.com/ewilan-riviere/scanner/pkg/mediainfo/types"
 
 func ConvertGeneral(item *types.MediainfoItem, items []types.MediainfoOutputItem) {
 	item.UniqueID = types.FilterItems("Unique ID", items)

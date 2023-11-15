@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ewilan-riviere/files/pkg/mediainfo/types"
+	"github.com/ewilan-riviere/scanner/pkg/mediainfo/types"
 )
 
 func Make(output string) []types.MediainfoOutput {

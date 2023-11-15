@@ -5,9 +5,9 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/ewilan-riviere/files/pkg/mediainfo/convert"
-	"github.com/ewilan-riviere/files/pkg/mediainfo/output"
-	"github.com/ewilan-riviere/files/pkg/mediainfo/types"
+	"github.com/ewilan-riviere/scanner/pkg/mediainfo/convert"
+	"github.com/ewilan-riviere/scanner/pkg/mediainfo/output"
+	"github.com/ewilan-riviere/scanner/pkg/mediainfo/types"
 )
 
 func Make(path string) types.MediainfoItem {
