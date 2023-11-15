@@ -1,4 +1,4 @@
-# spotlight
+# files
 
 [![go][go-version-src]][go-version-href]
 [![tests][tests-src]][tests-href]
@@ -6,7 +6,7 @@
 
 CLI to parse files for a list or to get metadata. Powered by Go.
 
-Metadata parsed by [`mediainfo.23.10`](https://mediaarea.net/en/MediaInfo) (hard requirement).
+Metadata parsed by [`mediainfo`](https://mediaarea.net/en/MediaInfo) (v23.10).
 
 ## Install
 
@@ -14,13 +14,24 @@ Metadata parsed by [`mediainfo.23.10`](https://mediaarea.net/en/MediaInfo) (hard
 go install github.com/ewilan-riviere/files@latest
 ```
 
+You have to install [`mediainfo`](https://mediaarea.net/en/MediaInfo) (v23.10) with Homebrew, apt or scoop if you want to use `metadata` command.
+
 ## Usage
 
-```bash
-go build -o files ; ./files parse /Volumes/data/video/animation
-go build -o files ; ./files --output="output/files.json" parse /Volumes/data/video/animation
+Options:
 
-go build -o files ; ./files --output="output/metadata.json" metadata /Volumes/data/music/librairies/podcasts/F.Kermesse/FK.1_Le.Gore.Philippe.Bouvard.de.la.mort.mp3
+- `-o|--output`: output file path, if not set, output is printed in stdout
+
+### Parse
+
+```bash
+files parse /path/to/directory
+```
+
+### Metadata
+
+```bash
+files metadata /path/to/file
 ```
 
 ## License
