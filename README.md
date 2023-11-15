@@ -14,7 +14,7 @@ Metadata parsed by [`mediainfo`](https://mediaarea.net/en/MediaInfo) (v23.10).
 go install github.com/ewilan-riviere/files@latest
 ```
 
-You have to install [`mediainfo`](https://mediaarea.net/en/MediaInfo) (v23.10) with Homebrew, apt or scoop if you want to use `metadata` command.
+You have to install [`mediainfo`](https://mediaarea.net/en/MediaInfo) with brew, apt or scoop if you want to use `metadata` command.
 
 ## Usage
 

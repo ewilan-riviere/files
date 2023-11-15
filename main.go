@@ -1,3 +1,20 @@
+// Package files is a CLI to parse files for a list or to get metadata.
+//
+// Examples/readme can be found on the GitHub page at https://github.com/ewilan-riviere/files
+//
+// If you want to use it as CLI, you can install it with:
+//
+//	go install github.com/ewilan-riviere/files
+//
+// All commands have output option to print the result into a JSON file.
+//
+// Parse files from a path.
+//
+//	files parse /path/to/directory
+//
+// Parse file metadata
+//
+//	files metadata /path/to/file
 package main
 
 import (
