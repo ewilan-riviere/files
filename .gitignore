@@ -1,5 +1,5 @@
 .env
-files
+scanner
 .DS_Store
 testing.md
 *.json
