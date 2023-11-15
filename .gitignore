@@ -1,4 +1,5 @@
 .env
-files
+./files
 .DS_Store
 testing.md
+*.json

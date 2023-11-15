@@ -1,4 +1,4 @@
-module github.com/ewilan-riviere/spotlight
+module github.com/ewilan-riviere/files
 
 go 1.21.3
 
@@ -12,5 +12,7 @@ require (
 
 require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/nareix/joy4 v0.0.0-20200507095837-05a4ffbb5369 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/zelenin/go-mediainfo v1.0.0 // indirect
 )
