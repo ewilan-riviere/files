@@ -7,13 +7,20 @@ import (
 )
 
 func Make(path string) []string {
-	var list []string
 	var files []string
+	var list []string
+
 	disallowedExtensions := []string{".DS_Store"}
 
-	err := filepath.Walk(path, visit(&files))
+	realRoot, err := filepath.EvalSymlinks(path)
 	if err != nil {
-		fmt.Printf("error walking the path %v: %v\n", path, err)
+		fmt.Printf("Error resolving symbolic link: %v\n", err)
+		return files
+	}
+
+	err = filepath.Walk(realRoot, visit(&files))
+	if err != nil {
+		fmt.Printf("Error walking the path %v: %v\n", realRoot, err)
 	}
 
 	// Print the collected file paths
@@ -37,10 +44,12 @@ func Make(path string) []string {
 func visit(files *[]string) func(string, os.FileInfo, error) error {
 	return func(path string, info os.FileInfo, err error) error {
 		if err != nil {
-			fmt.Println(err) // can't walk here,
-			return nil       // ignore this error.
+			fmt.Println(err)
+			return nil
 		}
-		if !info.IsDir() {
+		if info.IsDir() {
+			//
+		} else {
 			*files = append(*files, path)
 		}
 		return nil
