@@ -12,6 +12,6 @@ func TestWebhook(t *testing.T) {
 	items := files.Make("./")
 	printer.Print(items)
 
-	metadata := mediainfo.Make("./scanner")
+	metadata := mediainfo.Make("./test/media/test.mp3")
 	printer.Print(metadata)
 }
