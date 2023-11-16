@@ -89,7 +89,7 @@ func main() {
 	cmdParse.Flags().StringP("output", "o", "", "Print files into JSON output file")
 	cmdMetadata.Flags().StringP("output", "o", "", "Print files into JSON output file")
 
-	var rootCmd = &cobra.Command{Use: "files"}
+	var rootCmd = &cobra.Command{Use: "scanner"}
 	rootCmd.AddCommand(cmdParse)
 	rootCmd.AddCommand(cmdMetadata)
 	rootCmd.Execute()
