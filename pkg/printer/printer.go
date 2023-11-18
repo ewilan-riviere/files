@@ -9,13 +9,13 @@ import (
 )
 
 type Params struct {
-	V    interface{}
+	Data interface{}
 	Path string
 }
 
 func ToJSON(params Params) {
 	// Convert string array to JSON with pretty print
-	jsonData, err := json.MarshalIndent(params.V, "", "    ")
+	jsonData, err := json.MarshalIndent(params.Data, "", "    ")
 	if err != nil {
 		fmt.Println("Error marshaling to JSON:", err)
 		return

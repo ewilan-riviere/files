@@ -49,7 +49,7 @@ func main() {
 
 				if output != "" {
 					printer.ToJSON(printer.Params{
-						V:    items,
+						Data: items,
 						Path: output,
 					})
 				}
@@ -80,7 +80,7 @@ func main() {
 			printer.Print(metadata)
 
 			printer.ToJSON(printer.Params{
-				V:    metadata,
+				Data: metadata,
 				Path: output,
 			})
 		},

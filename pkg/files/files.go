@@ -10,8 +10,6 @@ func Make(path string) []string {
 	var files []string
 	var list []string
 
-	disallowedExtensions := []string{".DS_Store"}
-
 	realRoot, err := filepath.EvalSymlinks(path)
 	if err != nil {
 		fmt.Printf("Error resolving symbolic link: %v\n", err)
@@ -23,21 +21,8 @@ func Make(path string) []string {
 		fmt.Printf("Error walking the path %v: %v\n", realRoot, err)
 	}
 
-	// Print the collected file paths
-	for _, file := range files {
-		extension := filepath.Ext(file)
-		valid := true
-		for _, disallowedExtension := range disallowedExtensions {
-			if extension == disallowedExtension {
-				valid = false
-			}
-		}
-
-		if valid {
-			list = append(list, file)
-		}
-	}
-
+	// Append the collected file paths to the list
+	list = append(list, files...)
 	return list
 }
 
