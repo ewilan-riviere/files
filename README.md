@@ -14,7 +14,7 @@ Metadata parsed by [`mediainfo`](https://mediaarea.net/en/MediaInfo) (v23.10).
 go install github.com/ewilan-riviere/scanner@latest
 ```
 
-You have to install [`mediainfo`](https://mediaarea.net/en/MediaInfo) with brew, apt or scoop if you want to use `metadata` command.
+You have to install [`mediainfo`](https://mediaarea.net/en/MediaInfo) with `brew`, `apt` or `scoop` if you want to use `metadata` command.
 
 ## Usage
 
