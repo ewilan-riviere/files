@@ -10,19 +10,19 @@
 //
 // Parse files from a path (options: -o to print into a JSON file)
 //
-//	files parse /path/to/directory
+//	scanner parse /path/to/directory
 //
 // Parse file information from a filepath (options: -o to print into a JSON file)
 //
-//	files info /path/to/file
+//	scanner info /path/to/file
 //
 // Parse file metadata (options: -j to output as JSON, -o to print into a JSON file)
 //
-//	files metadata /path/to/file
+//	scanner metadata /path/to/file
 //
 // Parse files from a path with info, output is raw JSON (options: -o to print into a JSON file)
 //
-//	files periscope /path/to/directory
+//	scanner periscope /path/to/directory
 package main
 
 import (
@@ -208,7 +208,7 @@ func main() {
 	rootCmd.AddCommand(cmdInfo)
 	rootCmd.AddCommand(cmdMetadata)
 	rootCmd.AddCommand(cmdPeriscope)
-	rootCmd.Version = "0.0.4"
+	rootCmd.Version = "0.0.5"
 	rootCmd.Execute()
 }
 
