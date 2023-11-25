@@ -208,6 +208,7 @@ func main() {
 	rootCmd.AddCommand(cmdInfo)
 	rootCmd.AddCommand(cmdMetadata)
 	rootCmd.AddCommand(cmdPeriscope)
+	rootCmd.Version = "0.0.4"
 	rootCmd.Execute()
 }
 
