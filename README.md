@@ -4,7 +4,7 @@
 [![tests][tests-src]][tests-href]
 [![license][license-src]][license-href]
 
-CLI to parse files for a list or to get metadata. Powered by Go.
+CLI to parse files or to get metadata. Powered by Go.
 
 Metadata parsed by [`mediainfo`](https://mediaarea.net/en/MediaInfo) (v23.10).
 
