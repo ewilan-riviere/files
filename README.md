@@ -18,15 +18,18 @@ You have to install [`mediainfo`](https://mediaarea.net/en/MediaInfo) with `brew
 
 ## Usage
 
-Options:
-
-- `-o|--output`: output file path, if not set, output is printed in stdout
-
 ### Parse
+
+Parse files from a path
 
 ```bash
 scanner parse /path/to/directory
 ```
+
+Options:
+
+- `-o|--output`: output file path, if not set, output is printed in stdout
+- `-j|--json`: output is printed in json format
 
 Output example
 
@@ -56,17 +59,24 @@ scanner parse -o=path/to/output.json /path/to/directory
 
 ### Metadata
 
+Parse file metadata (powered by [`mediainfo`](https://mediaarea.net/en/MediaInfo)) from a filepath
+
 ```bash
 scanner metadata /path/to/file
 ```
 
+Options:
+
+- `-o|--output`: output file path, if not set, output is printed in stdout
+- `-j|--json`: output is printed in json format
+
 Output example
 
 ```bash
-UniqueID: empty
+UniqueID:
 CompleteName: ./test/media/test.mp3
 Format: MPEG Audio
-FormatVersion: empty
+FormatVersion:
 FileSize: 266 KiB
 Duration: 11 s 49 ms
 OverallBitRate: 128 kb/s
@@ -78,16 +88,16 @@ TrackNamePosition: 1
 Performer: Mr Piouf
 Genre: Roleplaying game
 RecordedDate: 2016
-FrameRate: empty
-MovieName: empty
-EncodedDate: empty
-WritingApplication: empty
+FrameRate:
+MovieName:
+EncodedDate:
+WritingApplication:
 WritingLibrary: LAME3.100
 Cover: Yes
 CoverType: Cover (front)
 CoverMime: image/jpeg
 Comment: http://www.p1pdd.com
-Attachments: empty
+Attachments:
 Videos: []
 Audios:
 [ID: , Format: MPEG Audio, FormatInfo: , FormatProfile: Layer 3, FormatVersion: Version 1, CommercialName: , CodecID: , Duration: 11 s 50 ms, BitRateMode: Constant, BitRate: 128 kb/s, Channel: 2 channels, ChannelLayout: , SamplingRate: 44.1 kHz, FrameRate: 38.281 FPS (1152 SPF), Compression: Lossy, StreamSize: 173 KiB (65%), WritingLibrary: LAME3.100, EncodingSettings: -m j -V 4 -q 2 -lowpass 17 -b 128, Title: , Language: , ServiceKind: , Default: , Forced: ]
@@ -102,6 +112,47 @@ You can save the output in a file
 ```bash
 scanner metadata -o=path/to/output.json /path/to/file
 ```
+
+### Info
+
+Parse file information from a filepath
+
+```bash
+scanner info /path/to/file
+```
+
+Options:
+
+- `-o|--output`: output file path, if not set, output is printed in stdout
+- `-j|--json`: output is printed in json format
+
+Output example
+
+```bash
+"Name": " Alexandre.Astier.LExoconference.2015.mkv",
+"Size": 3752844462,
+"Mode": 448,
+"ModTime": "2023-11-24T09:03:37.263929367+01:00",
+"IsDir": false
+```
+
+You can save the output in a file
+
+```bash
+scanner info -o=path/to/output.json /path/to/file
+```
+
+### Periscope
+
+Parse files from a path with info, output is raw JSON
+
+```bash
+scanner periscope /path/to/directory
+```
+
+Options:
+
+- `-o|--output`: output file path, if not set, output is printed in stdout
 
 ## License
 

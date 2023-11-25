@@ -44,6 +44,16 @@ func ToJSON(params Params) {
 	fmt.Println("JSON data written to", path)
 }
 
+func ToJSONString(data interface{}) string {
+	jsonData, err := json.Marshal(data)
+	if err != nil {
+		fmt.Println("Error marshaling to JSON:", err)
+		return ""
+	}
+
+	return string(jsonData)
+}
+
 func createDirIfNotExist(path string) {
 	// remove filename from path
 	path = path[:len(path)-len(path[strings.LastIndex(path, "/"):])]
@@ -89,7 +99,7 @@ func printStruct(s interface{}) {
 		case reflect.String:
 			s := reflect.ValueOf(fieldValue)
 			if s.Len() == 0 {
-				fmt.Printf("%v\n", "empty")
+				fmt.Printf("%v\n", "")
 			} else {
 				fmt.Printf("%v\n", fieldValue)
 			}
@@ -137,7 +147,7 @@ func printStructItem(s interface{}) {
 
 		val := fieldName + ": " + fieldValue
 		if i != length-1 {
-			val = val + ","
+			val = val + "\n"
 		}
 		list = append(list, val)
 	}
